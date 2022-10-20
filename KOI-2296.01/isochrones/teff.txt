@@ -1,0 +1,10 @@
+#!/Applications/Develop/Mathematica.app/Contents/MacOS/MathematicaScript-script 
+
+thisfolder=ToString[$ScriptCommandLine[[2]]];
+data=Import[StringJoin[thisfolder,"/kplr*_dr25-stellarposterior.txt"],"Table"][[1]];
+data=data[[5;;All]];
+teff=data[[All,1]];
+feh=data[[All,3]];
+logg=data[[All,2]];
+test={{"Teff = ",Round[Median[teff],0.1],Round[StandardDeviation[teff],0.1]},{"feh = ",Round[Median[feh],0.01],Round[StandardDeviation[feh],0.01]},{"logg = ",Round[Median[logg],0.001],Round[StandardDeviation[logg],0.001]}};
+Export[StringJoin[thisfolder,"/TFL.txt"],test,"Table"]

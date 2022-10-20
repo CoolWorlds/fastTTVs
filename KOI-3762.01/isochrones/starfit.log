@@ -1,0 +1,20 @@
+2022-04-05 13:21:48,302: single starfit successful for . in 0.9 minutes.
+2022-04-05 13:23:22,464: single starfit calculation failed for ..
+Traceback (most recent call last):
+  File "/Users/dkipping/anaconda3/lib/python3.7/site-packages/isochrones-1.2.2.dev0-py3.7.egg/isochrones/starfit.py", line 105, in starfit
+    mod.save_hdf(os.path.join(folder, model_filename), overwrite=overwrite)
+  File "/Users/dkipping/anaconda3/lib/python3.7/site-packages/isochrones-1.2.2.dev0-py3.7.egg/isochrones/starmodel.py", line 1078, in save_hdf
+    raise IOError('{} in {} exists.  Set either overwrite or append option.'.format(path,filename))
+OSError:  in ./dartmouth_starmodel_single.h5 exists.  Set either overwrite or append option.
+2022-04-05 13:23:23,917: single starfit successful for . in 0.9 minutes.
+2022-04-05 13:24:24,000: single starfit calculation failed for ..
+Traceback (most recent call last):
+  File "/Users/dkipping/anaconda3/lib/python3.7/site-packages/isochrones-1.2.2.dev0-py3.7.egg/isochrones/starfit.py", line 105, in starfit
+    mod.save_hdf(os.path.join(folder, model_filename), overwrite=overwrite)
+  File "/Users/dkipping/anaconda3/lib/python3.7/site-packages/isochrones-1.2.2.dev0-py3.7.egg/isochrones/starmodel.py", line 1078, in save_hdf
+    raise IOError('{} in {} exists.  Set either overwrite or append option.'.format(path,filename))
+OSError:  in ./dartmouth_starmodel_single.h5 exists.  Set either overwrite or append option.
+2022-04-05 13:24:25,278: single starfit successful for . in 1.0 minutes.
+2022-04-05 13:25:26,482: single starfit successful for . in 0.9 minutes.
+2022-04-05 13:27:52,219: single starfit successful for . in 0.9 minutes.
+2022-04-05 13:28:57,014: single starfit successful for . in 0.9 minutes.

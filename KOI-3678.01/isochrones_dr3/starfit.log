@@ -1,0 +1,34 @@
+2022-07-04 08:01:08,131: single starfit successful for . in 0.5 minutes.
+2022-07-04 08:01:41,181: single starfit successful for . in 0.5 minutes.
+2022-07-04 08:04:34,110: single starfit successful for . in 0.5 minutes.
+2022-07-04 08:05:05,031: single starfit successful for . in 0.5 minutes.
+2022-07-04 08:05:38,196: single starfit successful for . in 0.5 minutes.
+2022-07-04 08:06:09,829: single starfit successful for . in 0.5 minutes.
+2022-07-04 08:06:41,855: single starfit successful for . in 0.5 minutes.
+2022-07-04 08:07:15,092: single starfit successful for . in 0.5 minutes.
+2022-07-04 08:09:22,623: single starfit calculation failed for ..
+Traceback (most recent call last):
+  File "/Users/dkipping/anaconda3/lib/python3.7/site-packages/isochrones-1.2.2.dev0-py3.7.egg/isochrones/isochrone.py", line 750, in interp_value
+    return interp_value(float(mass), float(age), float(feh), icol,
+TypeError: only size-1 arrays can be converted to Python scalars
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dkipping/anaconda3/lib/python3.7/site-packages/isochrones-1.2.2.dev0-py3.7.egg/isochrones/starfit.py", line 105, in starfit
+    mod.save_hdf(os.path.join(folder, model_filename), overwrite=overwrite)
+  File "/Users/dkipping/anaconda3/lib/python3.7/site-packages/isochrones-1.2.2.dev0-py3.7.egg/isochrones/starmodel.py", line 1080, in save_hdf
+    if self.samples is not None:
+  File "/Users/dkipping/anaconda3/lib/python3.7/site-packages/isochrones-1.2.2.dev0-py3.7.egg/isochrones/starmodel.py", line 934, in samples
+    self._make_samples()
+  File "/Users/dkipping/anaconda3/lib/python3.7/site-packages/isochrones-1.2.2.dev0-py3.7.egg/isochrones/starmodel.py", line 896, in _make_samples
+    distance=distance, AV=AV)
+  File "/Users/dkipping/anaconda3/lib/python3.7/site-packages/isochrones-1.2.2.dev0-py3.7.egg/isochrones/isochrone.py", line 275, in __call__
+    Rs = self.radius(*args)*1
+  File "/Users/dkipping/anaconda3/lib/python3.7/site-packages/isochrones-1.2.2.dev0-py3.7.egg/isochrones/isochrone.py", line 199, in radius
+    return np.sqrt(G*self.mass(*args)*MSUN/10**self.logg(*args))/RSUN
+  File "/Users/dkipping/anaconda3/lib/python3.7/site-packages/isochrones-1.2.2.dev0-py3.7.egg/isochrones/isochrone.py", line 687, in logg
+    return self.interp_value(mass, age, feh, self.logg_col)
+  File "/Users/dkipping/anaconda3/lib/python3.7/site-packages/isochrones-1.2.2.dev0-py3.7.egg/isochrones/isochrone.py", line 764, in interp_value
+    self.ages, self.fehs, self.grid_Ns)
+TypeError: expected dtype object, got 'numpy.dtype[float64]'
